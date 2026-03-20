@@ -48,9 +48,17 @@ gst |>
   scale_y_continuous(
     breaks = c()
   )+
-  theme_minimal()+
+  theme_minimal(
+    base_size = 18
+  )+
   theme(
     panel.grid = element_blank(),
     # axis.line.y = element_line()
   )
+
+ggsave(
+  filename = "ai_agents.png",
+  width = 3840,
+  height = 2160,
+  units = "px")
   
